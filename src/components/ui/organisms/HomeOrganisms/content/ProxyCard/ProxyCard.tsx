@@ -11,7 +11,7 @@ const ProxyCard = ({ data }: TProxyCardProps) => {
     return (
         <div
             className={cn(
-                'flex flex-col rounded-lg border-4 border-slate-200 bg-gradient-to-b from-20% to-100% p-2 break-words shadow',
+                'flex h-full flex-col rounded-lg border-4 border-slate-200 bg-gradient-to-b from-0% to-100% p-4 break-words shadow',
                 pingCardColor(data.ping, 'gradient')
             )}
         >
@@ -123,15 +123,32 @@ const ProxyCard = ({ data }: TProxyCardProps) => {
                     <span className='text-sm font-medium'>{formattedDate(data.addTime)}</span>
                 </div>
             </div>
-            <Button
-                component={Link}
-                href={`tg://proxy?server=${data.host}&port=${data.port}&secret=${data.secret}`}
-                className='mt-8'
-                variant='filled'
-                color='dark'
-            >
-                Go to link
-            </Button>
+            <div className='mt-8 flex gap-2'>
+                <CopyButton value={`tg://proxy?server=${data.host}&port=${data.port}&secret=${data.secret}`}>
+                    {({ copy, copied }) => (
+                        <Button
+                            variant='filled'
+                            color='dark'
+                            onClick={copy}
+                            disabled={copied}
+                            classNames={{ label: 'text-lg font-bold' }}
+                            size='md'
+                        >
+                            {copied ? <FaCheck size={22} className='text-black' /> : <MdContentCopy size={22} />}
+                        </Button>
+                    )}
+                </CopyButton>
+                <Button
+                    component={Link}
+                    href={`tg://proxy?server=${data.host}&port=${data.port}&secret=${data.secret}`}
+                    variant='filled'
+                    color='dark'
+                    size='md'
+                    classNames={{ root: 'grow' }}
+                >
+                    Go to link
+                </Button>
+            </div>
         </div>
     )
 }

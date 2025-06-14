@@ -9,6 +9,7 @@ import { Button } from '@mantine/core'
 import { SlRefresh } from 'react-icons/sl'
 import { LoadingBoundary } from '@/components/partials/boundaries/loading'
 import { ErrorBoundary } from '@/components/partials/boundaries/error'
+import { BsTelegram } from 'react-icons/bs'
 
 const HomeTemplate = () => {
     const { data, isFetching, isSuccess, error, refetch } = useQuery<AxiosResponse<TProxyRequestType[]>>({
@@ -27,8 +28,10 @@ const HomeTemplate = () => {
     return (
         <div className='flex size-full flex-col'>
             <div className='flex flex-wrap justify-between gap-2 bg-white py-5 text-3xl font-black'>
-                <span>Proxies for tel</span>
-
+                <div className='flex items-center gap-3'>
+                    <BsTelegram />
+                    <span>Proxies</span>
+                </div>
                 <div className='flex items-center'>
                     <Button onClick={() => refetch()} disabled={isFetching} color='cyan'>
                         <SlRefresh />
