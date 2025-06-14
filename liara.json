@@ -1,0 +1,7 @@
+{
+    "app": "proxy-telegram",
+    "port": 3000,
+    "build": {
+        "location": "iran"
+    }
+}
