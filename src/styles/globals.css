@@ -1,0 +1,6 @@
+@import 'tailwindcss';
+@import './theme/colors.theme.css';
+
+body {
+    min-width: 360px;
+}
