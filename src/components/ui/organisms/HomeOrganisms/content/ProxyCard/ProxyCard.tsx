@@ -49,7 +49,7 @@ const ProxyCard = ({ data }: TProxyCardProps) => {
                                 )}
                             </CopyButton>
                         </div>
-                        <span className='text-sm font-medium'>{data.host}</span>
+                        <span className='truncate text-sm font-medium'>{data.host}</span>
                     </div>
 
                     <hr />
@@ -78,7 +78,7 @@ const ProxyCard = ({ data }: TProxyCardProps) => {
                                 )}
                             </CopyButton>
                         </div>
-                        <span className='text-sm font-medium'>{data.port}</span>
+                        <span className='truncate text-sm font-medium'>{data.port}</span>
                     </div>
 
                     <hr />
@@ -107,7 +107,7 @@ const ProxyCard = ({ data }: TProxyCardProps) => {
                                 )}
                             </CopyButton>
                         </div>
-                        <span className='text-sm font-medium'>{data.secret}</span>
+                        <span className='truncate text-sm font-medium'>{data.secret}</span>
                     </div>
 
                     <hr />
