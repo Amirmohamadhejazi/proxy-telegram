@@ -2,7 +2,6 @@ import { cn } from '@/core/utils/common/cn'
 import React from 'react'
 import TProxyCardProps from './ProxyCard.types'
 import { Button, CopyButton } from '@mantine/core'
-import Link from 'next/link'
 import { MdContentCopy } from 'react-icons/md'
 import { FaCheck } from 'react-icons/fa'
 import { pingCardColor, formattedDate } from './ProxyCard.utils'
@@ -141,11 +140,12 @@ const ProxyCard = ({ data }: TProxyCardProps) => {
                         )}
                     </CopyButton>
                     <Button
-                        component={Link}
+                        component={'a'}
                         href={`tg://proxy?server=${data.host}&port=${data.port}&secret=${data.secret}`}
                         variant='filled'
                         color='dark'
                         size='md'
+                        target='_blank'
                         classNames={{ root: 'grow' }}
                     >
                         Go to link
