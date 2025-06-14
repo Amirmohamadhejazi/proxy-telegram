@@ -9,7 +9,7 @@ const LazyCard = ({ children }: PropsWithChildren) => {
 
     return (
         <div ref={ref} className='h-full'>
-            {inView ? children : <div className='min-h-[500px] animate-pulse rounded-lg bg-black/30 shadow' />}
+            {inView ? children : <div className='min-h-[503px] rounded-lg bg-black/30 shadow' />}
         </div>
     )
 }
