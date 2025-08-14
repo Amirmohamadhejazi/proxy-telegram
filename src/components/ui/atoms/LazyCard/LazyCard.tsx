@@ -3,7 +3,7 @@ import { useInView } from 'react-intersection-observer'
 
 const LazyCard = ({ children }: PropsWithChildren) => {
     const { ref, inView } = useInView({
-        threshold: 0,
+        threshold: 0.1,
         triggerOnce: false,
     })
 

@@ -26,8 +26,8 @@ const HomeTemplate = () => {
     }
 
     return (
-        <div className='flex size-full flex-col'>
-            <div className='flex flex-wrap justify-between gap-2 bg-white py-5 text-3xl font-black'>
+        <div className='flex size-full flex-col gap-5 py-5'>
+            <div className='flex flex-wrap justify-between gap-2 bg-white px-3 text-3xl font-black'>
                 <div className='flex items-center gap-3'>
                     <BsTelegram />
                     <span>Proxies</span>
@@ -39,7 +39,7 @@ const HomeTemplate = () => {
                 </div>
             </div>
             <div
-                className={cn('mb-5 w-full grow overflow-auto', {
+                className={cn('w-full grow overflow-auto px-3', {
                     'grid place-items-center': isFetching,
                 })}
             >

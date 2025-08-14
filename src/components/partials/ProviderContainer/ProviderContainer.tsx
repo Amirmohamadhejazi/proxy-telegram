@@ -25,7 +25,7 @@ const ProviderContainer = ({ children }: { children: React.ReactNode }) => {
             <DirectionProvider>
                 <MantineProvider>
                     <div className='h-screen w-full'>
-                        <div className='mx-auto h-full p-3 lg:container'>{children}</div>
+                        <div className='mx-auto h-full lg:container'>{children}</div>
                     </div>
                 </MantineProvider>
             </DirectionProvider>

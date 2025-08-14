@@ -25,7 +25,7 @@ const ProxyCard = ({ data }: TProxyCardProps) => {
                     </div>
 
                     {/* host name */}
-                    <div className='flex flex-col'>
+                    <div className='group/list flex flex-col'>
                         <div className='flex items-center justify-between gap-2'>
                             <span className='text-md font-bold'>Server (Host name):</span>
                             <CopyButton value={data.host}>
@@ -35,7 +35,7 @@ const ProxyCard = ({ data }: TProxyCardProps) => {
                                         onClick={copy}
                                         disabled={copied}
                                         classNames={{
-                                            root: 'disabled:!bg-transparent disabled:opacity-50 group/button',
+                                            root: 'disabled:!bg-transparent disabled:opacity-50 group/button group-hover/list:opacity-100 md:opacity-0 duration-100 ',
                                             label: 'text-black group-disabled/button:text-black/10',
                                         }}
                                     >
@@ -54,7 +54,7 @@ const ProxyCard = ({ data }: TProxyCardProps) => {
                     <hr />
 
                     {/* port */}
-                    <div className='flex flex-col'>
+                    <div className='group/list flex flex-col'>
                         <div className='flex items-center justify-between gap-2'>
                             <span className='text-md font-bold'>Port:</span>
                             <CopyButton value={data.port.toString()}>
@@ -64,7 +64,7 @@ const ProxyCard = ({ data }: TProxyCardProps) => {
                                         onClick={copy}
                                         disabled={copied}
                                         classNames={{
-                                            root: 'disabled:!bg-transparent disabled:opacity-50 group/button',
+                                            root: 'disabled:!bg-transparent disabled:opacity-50 group/button group-hover/list:opacity-100 md:opacity-0 duration-100 ',
                                             label: 'text-black group-disabled/button:text-black/10',
                                         }}
                                     >
@@ -83,7 +83,7 @@ const ProxyCard = ({ data }: TProxyCardProps) => {
                     <hr />
 
                     {/* secret */}
-                    <div className='flex flex-col'>
+                    <div className='group/list flex flex-col'>
                         <div className='flex items-center justify-between gap-2'>
                             <span className='text-md font-bold'>Secret:</span>
                             <CopyButton value={data.secret.toString()}>
@@ -93,7 +93,7 @@ const ProxyCard = ({ data }: TProxyCardProps) => {
                                         onClick={copy}
                                         disabled={copied}
                                         classNames={{
-                                            root: 'disabled:!bg-transparent disabled:opacity-50 group/button',
+                                            root: 'disabled:!bg-transparent disabled:opacity-50 group/button group-hover/list:opacity-100 md:opacity-0 duration-100 ',
                                             label: 'text-black group-disabled/button:text-black/10',
                                         }}
                                     >
